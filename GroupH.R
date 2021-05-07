@@ -20,11 +20,11 @@ GreenhouseGas <- read.csv("GreenhouseGas.csv")
 #View(FossilFuel)
 #View(GreenhouseGas)
 
-#cleans to data from 2005 with 50,000 or more Tonnes of C02 equivalent
+#cleans to data in 2005 with 50,000 or more Tonnes of C02 equivalent
 UpdatedGreenhouseGas <- subset(GreenhouseGas, select = c(1,19))
 UpdatedGreenhouseGas <- filter(UpdatedGreenhouseGas, X2005>50000.0)
 
-#cleans to data from 2005 with fossil fuel % at 50 or above
+#cleans to data in 2005 with fossil fuel % at 50 or above
 UpdatedFossilFuel <- subset(FossilFuel, select = c(1,2,48))
 UpdatedFossilFuel <- filter(UpdatedFossilFuel, X2005>50.0)
 
